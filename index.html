@@ -1,0 +1,66 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>操作系统期末简答题库</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <main class="app-shell">
+      <header class="topbar">
+        <div>
+          <p class="eyebrow">操作系统期末复习</p>
+          <h1>操作系统期末简答题库</h1>
+          <p class="subtitle">每轮随机 5 道，提交后由 DeepSeek 按期末简答题风格批改。</p>
+        </div>
+        <div class="score-panel" aria-live="polite">
+          <span id="scoreLabel">本轮状态</span>
+          <strong id="scoreText">未提交</strong>
+        </div>
+      </header>
+
+      <section class="toolbar" aria-label="题库控制">
+        <div class="segmented" role="tablist" aria-label="抽题范围">
+          <button class="segment active" type="button" data-scope="all">全库</button>
+          <button class="segment" type="button" data-scope="high">高频</button>
+          <button class="segment" type="button" data-scope="chapter1">第 1 章</button>
+          <button class="segment" type="button" data-scope="chapter2">第 2 章</button>
+          <button class="segment" type="button" data-scope="chapter3">第 3 章</button>
+          <button class="segment" type="button" data-scope="chapter4">第 4 章</button>
+          <button class="segment" type="button" data-scope="chapter5">第 5 章</button>
+          <button class="segment" type="button" data-scope="pv">同步/死锁</button>
+        </div>
+        <div class="actions">
+          <button class="tool-button primary" id="newRoundBtn" type="button">随机 5 题</button>
+          <button class="tool-button" id="submitBtn" type="button">提交批改</button>
+        </div>
+      </section>
+
+      <section class="summary-band" aria-label="题库概览">
+        <div>
+          <span>题库规模</span>
+          <strong id="bankCount">0 题</strong>
+        </div>
+        <div>
+          <span>本轮题量</span>
+          <strong>5 题</strong>
+        </div>
+        <div>
+          <span>覆盖范围</span>
+          <strong>第 1-5 章重点</strong>
+        </div>
+        <div>
+          <span>评分风格</span>
+          <strong>定义 + 特点 + 区别</strong>
+        </div>
+      </section>
+
+      <section id="message" class="message" hidden></section>
+      <section id="questionList" class="question-list" aria-live="polite"></section>
+    </main>
+
+    <script src="question-bank.js" defer></script>
+    <script src="main.js" defer></script>
+  </body>
+</html>
